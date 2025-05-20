@@ -72,6 +72,11 @@
       background: #0a192f;
       color: #fff;
     }
+    img.project-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -107,6 +112,22 @@
     </div>
   </section>
 
+  <section id="ml-pipeline">
+    <h2>ML Pipeline with FastAPI</h2>
+    <img src="9d6157e0-f66e-4ebf-bb10-e3d39f205739.png" alt="ML Pipeline Diagram" class="project-img">
+    <p><strong>Objective:</strong> Predict whether a person's income exceeds $50K using U.S. Census data.</p>
+    <p><strong>Overview:</strong> This project demonstrates the development and deployment of a scalable machine learning pipeline using FastAPI and MLflow. It includes preprocessing, model training with scikit-learn, REST API development, and model tracking for reproducibility and version control.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Used <strong>FastAPI</strong> to serve a trained classification model via RESTful endpoints</li>
+      <li>Implemented <strong>MLflow</strong> to track experiments, parameters, and metrics</li>
+      <li>Built a reusable and scalable pipeline structure with clear modularization</li>
+      <li>Used <strong>GitHub Actions</strong> for CI/CD automation and testing</li>
+    </ul>
+    <p><strong>Challenges Overcome:</strong> Addressed dependency conflicts and ensured consistent model versioning using MLflow’s model registry and artifact logging. Configured GitHub Actions to automatically run tests and linting for deployment readiness.</p>
+    <p><strong>Repository:</strong> <a href="https://github.com/hillkimberly/Deploying-a-Scalable-ML-Pipeline-with-FastAPI" target="_blank">View on GitHub</a></p>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: hillkimberlykh@gmail.com</p>
@@ -119,4 +140,5 @@
   </footer>
 </body>
 </html>
+
 
