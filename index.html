@@ -83,6 +83,10 @@
     }
   </style>
   <script>
+        function goBackToProjects() {
+      document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
+      document.getElementById('projects').style.display = 'block';
+    }
     function showProject(id) {
       document.getElementById('projects').style.display = 'none';
       document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
@@ -171,6 +175,15 @@
     <p><strong>Tableau Public:</strong> <a href="https://public.tableau.com/app/profile/hillkimberlykh" target="_blank">View Dashboard</a></p>
   </section>
 
+  <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+  </section>
+
+  <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+  </section>
+
+  <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+  </section>
+  
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: hillkimberlykh@gmail.com</p>
