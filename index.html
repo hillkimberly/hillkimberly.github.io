@@ -51,12 +51,13 @@
     
     .project-card {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 24px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-height: 320px;
     }
 
     .section-subtext {
@@ -67,16 +68,44 @@
     .project-card h3 {
       margin-top: 0;
     }
+    
     .btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 8px 16px;
+      padding: 10px 18px;
       background: #0077cc;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      font-weight: 600;
     }
+
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    
+    .project-card p {
+      line-height: 1.4;
+    }
+    
+    .tool-tags {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .tool-tag {
+      display: inline-block;
+      background: #e8f1fb;
+      color: #0a4f8a;
+      padding: 6px 10px;
+      margin: 4px 6px 0 0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    
     footer {
       text-align: center;
       padding: 20px;
@@ -124,20 +153,52 @@
 
     <section id="projects">
       <h2>Featured Projects</h2>
-      <div class="project-grid">
+      <p class="section-subtext">
+        Selected analytics and machine learning projects demonstrating data preparation, modeling, visualization, and deployment skills.
+      </p>
+        <div class="project-grid">
         <div class="project-card">
-          <h3>ML Pipeline with FastAPI</h3>
-          <p>End-to-end deployment of a machine learning classifier with FastAPI & MLflow.</p>
+          <div>
+            <div class="project-icon">⚙️</div>
+            <h3>ML Pipeline with FastAPI</h3>
+            <p>End-to-end deployment of a machine learning classifier with FastAPI & MLflow.</p>
+            <div class="tool-tags">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">FastAPI</span>
+              <span class="tool-tag">MLflow</span>
+              <span class="tool-tag">Scikit-learn</span>
+            </div>
+          </div>
           <span class="btn" onclick="showProject('ml-pipeline')">View Project</span>
         </div>
+      
         <div class="project-card">
-          <h3>Customer Segmentation</h3>
-          <p>Identified key customer groups using PCA and KMeans, then visualized insights in Tableau to support targeted marketing strategies.</p>
+          <div>
+            <div class="project-icon">👥</div>
+            <h3>Customer Segmentation</h3>
+            <p>Identified key customer groups using PCA and KMeans, then visualized insights in Tableau to support targeted marketing strategies.</p>
+            <div class="tool-tags">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">PCA</span>
+              <span class="tool-tag">KMeans</span>
+              <span class="tool-tag">Tableau</span>
+            </div>
+          </div>
           <span class="btn" onclick="showProject('customer-segmentation')">View Project</span>
         </div>
+      
         <div class="project-card">
-          <h3>YouTube Data Dashboard</h3>
-          <p>Interactive Tableau visualizations analyzing engagement trends in video content.</p>
+          <div>
+            <div class="project-icon">📊</div>
+            <h3>YouTube Data Dashboard</h3>
+            <p>Interactive Tableau visualizations analyzing engagement trends in video content.</p>
+            <div class="tool-tags">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Tableau</span>
+              <span class="tool-tag">Data Prep</span>
+              <span class="tool-tag">Analytics</span>
+            </div>
+          </div>
           <span class="btn" onclick="showProject('youtube-dashboard')">View Project</span>
         </div>
       </div>
@@ -149,26 +210,51 @@
       Selected business automation and workflow solutions designed using Microsoft Power Platform and related tools. Some examples are generalized to protect client privacy.
     </p>
 
-    <div class="project-grid">  
-
+        <div class="project-grid">
       <div class="project-card">
-        <h3>Intern Performance Review System</h3>
-        <p>Built a custom Power Apps solution to streamline intern evaluations, centralize review data, and support HR reporting workflows.</p>
+        <div>
+          <div class="project-icon">🧑‍💼</div>
+          <h3>Intern Performance Review System</h3>
+          <p>Built a custom Power Apps solution to streamline intern evaluations, centralize review data, and support HR reporting workflows.</p>
+          <div class="tool-tags">
+            <span class="tool-tag">Power Apps</span>
+            <span class="tool-tag">SharePoint</span>
+            <span class="tool-tag">Power Automate</span>
+            <span class="tool-tag">Excel</span>
+          </div>
+        </div>
         <span class="btn" onclick="showProject('intern-review-system')">View Project</span>
       </div>
-      
+    
       <div class="project-card">
-        <h3>HR Review Dashboard</h3>
-        <p>Created a dashboard experience for filtering, reviewing, and exporting employee or intern review data for HR and management use.</p>
+        <div>
+          <div class="project-icon">📈</div>
+          <h3>HR Review Dashboard</h3>
+          <p>Created a dashboard experience for filtering, reviewing, and exporting employee or intern review data for HR and management use.</p>
+          <div class="tool-tags">
+            <span class="tool-tag">Power Apps</span>
+            <span class="tool-tag">SharePoint</span>
+            <span class="tool-tag">Dashboard Design</span>
+          </div>
+        </div>
         <span class="btn" onclick="showProject('hr-dashboard-demo')">View Project</span>
       </div>
-      
+    
       <div class="project-card">
-        <h3>Power Automate Export Workflow</h3>
-        <p>Designed an automated workflow to export review data and distribute reports more efficiently using Microsoft tools.</p>
+        <div>
+          <div class="project-icon">🔁</div>
+          <h3>Power Automate Export Workflow</h3>
+          <p>Designed an automated workflow to export review data and distribute reports more efficiently using Microsoft tools.</p>
+          <div class="tool-tags">
+            <span class="tool-tag">Power Automate</span>
+            <span class="tool-tag">Excel</span>
+            <span class="tool-tag">SharePoint</span>
+            <span class="tool-tag">Workflow Automation</span>
+          </div>
+        </div>
         <span class="btn" onclick="showProject('power-automate-export')">View Project</span>
-      </div>  
-    </div> 
+      </div>
+    </div>
   </section>
 
   <section id="ml-pipeline" class="project-details">
