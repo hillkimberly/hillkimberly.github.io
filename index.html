@@ -54,6 +54,12 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
+    .section-subtext {
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+    
     .project-card h3 {
       margin-top: 0;
     }
@@ -86,9 +92,14 @@
     function goBackToProjects() {
       document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
       document.getElementById('projects').style.display = 'block';
+      const automationSection = document.getElementById('automation-projects');
+      if (automationSection) automationSection.style.display = 'block';
     }
+  
     function showProject(id) {
       document.getElementById('projects').style.display = 'none';
+      const automationSection = document.getElementById('automation-projects');
+      if (automationSection) automationSection.style.display = 'none';
       document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
       document.getElementById(id).style.display = 'block';
     }
@@ -98,31 +109,46 @@
   <header>
     <img src="OpenToWork_KH.jpg" alt="Kimberly Hill Profile Photo">
     <h1>Kimberly Hill</h1>
-    <p>Data Analyst | AI/ML Enthusiast | Cloud-Savvy Problem Solver</p>
+    <p>Data Analyst | Power Platform & AI Automation Specialist | Business Workflow Builder</p>
   </header>
 
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#projects">Projects</a>
+  <a href="#automation-projects">Automation & AI</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>ML Pipeline with FastAPI</h3>
+          <p>End-to-end deployment of a machine learning classifier with FastAPI & MLflow.</p>
+          <span class="btn" onclick="showProject('ml-pipeline')">View Project</span>
+        </div>
+        <div class="project-card">
+          <h3>Customer Segmentation</h3>
+          <p>Identified key customer groups using PCA and KMeans, then visualized insights in Tableau to support targeted marketing strategies.</p>
+          <span class="btn" onclick="showProject('customer-segmentation')">View Project</span>
+        </div>
+        <div class="project-card">
+          <h3>YouTube Data Dashboard</h3>
+          <p>Interactive Tableau visualizations analyzing engagement trends in video content.</p>
+          <span class="btn" onclick="showProject('youtube-dashboard')">View Project</span>
+        </div>
+      </div>
+    </section>
+  
+    <section id="automation-projects">
+    <h2>Automation & AI Solutions</h2>
+    <p class="section-subtext">
+      Selected business automation and workflow solutions designed using Microsoft Power Platform and related tools. Some examples are generalized to protect client privacy.
+    </p>
     <div class="project-grid">
       <div class="project-card">
-        <h3>ML Pipeline with FastAPI</h3>
-        <p>End-to-end deployment of a machine learning classifier with FastAPI & MLflow.</p>
-        <span class="btn" onclick="showProject('ml-pipeline')">View Project</span>
-      </div>
-      <div class="project-card">
-        <h3>Customer Segmentation</h3>
-        <p>Identified key customer groups using PCA and KMeans, then visualized insights in Tableau to support targeted marketing strategies.</p>
-        <span class="btn" onclick="showProject('customer-segmentation')">View Project</span>
-      </div>
-      <div class="project-card">
-        <h3>YouTube Data Dashboard</h3>
-        <p>Interactive Tableau visualizations analyzing engagement trends in video content.</p>
-        <span class="btn" onclick="showProject('youtube-dashboard')">View Project</span>
+        <h3>Intern Performance Review System</h3>
+        <p>Built a custom Power Apps solution to streamline intern evaluations, centralize review data, and support HR reporting workflows.</p>
+        <span class="btn" onclick="showProject('intern-review-system')">View Project</span>
       </div>
     </div>
   </section>
@@ -182,7 +208,24 @@
     <p><strong>Tableau Public:</strong> <a href="https://public.tableau.com/app/profile/hillkimberlykh/viz/YouTubeEngagementAnalysis/YouTubeChannelEngagementScore" target="_blank">View Dashboard</a></p>
     <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
   </section>
-  
+
+  <section id="intern-review-system" class="project-details">
+  <h2>Intern Performance Review System</h2>
+  <p><strong>Objective:</strong> Streamline how managers submit intern evaluations and how HR tracks performance data across departments.</p>
+  <p><strong>Overview:</strong> I designed and developed a custom Microsoft Power Apps solution supported by SharePoint and Power Automate to digitize the intern review process. The system replaced manual review handling with a centralized workflow that improved consistency, reporting, and data visibility.</p>
+  <p><strong>Key Features:</strong></p>
+  <ul>
+    <li>Structured manager review submission form</li>
+    <li>Centralized SharePoint data storage</li>
+    <li>Status tracking and review management</li>
+    <li>HR-friendly dashboard and filtering workflow</li>
+    <li>Export support for reporting and analysis</li>
+  </ul>
+  <p><strong>Technologies Used:</strong> Power Apps, SharePoint Lists, Power Automate, Excel</p>
+  <p><strong>Outcome:</strong> The solution improved review consistency, reduced manual effort, and made performance data easier to track and report.</p>
+  <p><em>This portfolio example is presented using sample data and a generalized description to respect client confidentiality.</em></p>
+  <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+</section>
   
   <section id="contact">
     <h2>Contact</h2>
