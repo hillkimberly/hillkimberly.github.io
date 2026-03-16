@@ -117,7 +117,35 @@
       font-size: 0.85rem;
       font-weight: 600;
     }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
     
+    .service-card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    
+    .service-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    
+    .service-card p {
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+        
     footer {
       background: #0b2239;
       color: white;
@@ -177,12 +205,46 @@
     </p>
   </header>
 
-<nav>
-  <a href="#projects">Projects</a>
-  <a href="#automation-projects">Automation & AI</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#automation-projects">Automation & AI</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+    <section id="services">
+      <h2>Services</h2>
+      <p class="section-subtext">
+        Services available for small businesses, nonprofits, and teams looking to improve workflows, automate processes, and gain better visibility into their operations.
+      </p>
+    
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔁</div>
+          <h3>Workflow Automation</h3>
+          <p>
+            Design and build business process automations using Microsoft Power Automate, SharePoint, and related tools to reduce manual work and improve efficiency.
+          </p>
+        </div>
+    
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Dashboards & Reporting</h3>
+          <p>
+            Create clear, decision-ready dashboards and reporting solutions that help teams monitor performance, track outcomes, and uncover insights.
+          </p>
+        </div>
+    
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h3>AI-Enabled Business Systems</h3>
+          <p>
+            Develop practical solutions that combine automation, analytics, and AI tools to support smarter workflows, better communication, and scalable operations.
+          </p>
+        </div>
+      </div>
+    </section>
+  
     <section id="projects">
       <h2>Featured Projects</h2>
       <p class="section-subtext">
