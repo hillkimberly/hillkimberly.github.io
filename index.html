@@ -228,22 +228,29 @@
       display: none;
     }
   </style>
-  <script>
-    function goBackToProjects() {
-      document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
-      document.getElementById('projects').style.display = 'block';
-      const automationSection = document.getElementById('automation-projects');
-      if (automationSection) automationSection.style.display = 'block';
-    }
-  
-    function showProject(id) {
-      document.getElementById('projects').style.display = 'none';
-      const automationSection = document.getElementById('automation-projects');
-      if (automationSection) automationSection.style.display = 'none';
-      document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
+<script>
+  function goBackToProjects() {
+    document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
+    document.getElementById('about').style.display = 'block';
+    document.getElementById('services').style.display = 'block';
+    document.getElementById('automation-projects').style.display = 'block';
+    document.getElementById('projects').style.display = 'block';
+    document.getElementById('consulting').style.display = 'block';
+    document.getElementById('contact').style.display = 'block';
+  }
+
+  function showProject(id) {
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('services').style.display = 'none';
+    document.getElementById('automation-projects').style.display = 'none';
+    document.getElementById('projects').style.display = 'none';
+    document.getElementById('consulting').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+
+    document.querySelectorAll('.project-details').forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
 </head>
 <body>
   <header>
@@ -521,6 +528,54 @@
     </a>
   
   </section>  
+
+  <section id="hr-dashboard-demo" class="project-details">
+    <h2>HR Review Dashboard</h2>
+    <p><strong>Objective:</strong> Provide HR and management with a centralized dashboard to review, filter, and monitor intern or employee evaluation data more efficiently.</p>
+  
+    <p><strong>Overview:</strong> I created a dashboard-focused solution to improve visibility into review data and support faster decision-making. The system was designed to help HR teams organize performance information, filter by relevant criteria, and improve reporting access without relying on scattered spreadsheets or manual review processes.</p>
+  
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Centralized dashboard view for review records</li>
+      <li>Filtering options for HR and management use</li>
+      <li>Structured display of evaluation information</li>
+      <li>Improved reporting visibility across review data</li>
+      <li>Support for exporting and reviewing results more efficiently</li>
+    </ul>
+  
+    <p><strong>Technologies Used:</strong> Power Apps, SharePoint, Dashboard Design, Excel</p>
+  
+    <p><strong>Outcome:</strong> The dashboard improved access to review information, reduced manual effort involved in locating records, and gave stakeholders better visibility into workforce evaluation data.</p>
+  
+    <p><em>This portfolio example is presented using sample data and a generalized description to respect client confidentiality.</em></p>
+  
+    <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+  </section>
+
+  <section id="power-automate-export" class="project-details">
+    <h2>Power Automate Export Workflow</h2>
+    <p><strong>Objective:</strong> Automate the process of exporting review data and distributing reports more efficiently to reduce manual administrative work.</p>
+  
+    <p><strong>Overview:</strong> I designed an automated workflow that supports exporting structured review data for reporting and sharing purposes. The solution was built to reduce repetitive manual tasks, improve consistency, and make data distribution easier for teams responsible for reporting and operations.</p>
+  
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Automated workflow for exporting review-related data</li>
+      <li>Reduced dependency on manual report preparation</li>
+      <li>Improved consistency in data output and delivery</li>
+      <li>Integration with Microsoft tools for operational reporting</li>
+      <li>Supports scalable internal process automation</li>
+    </ul>
+  
+    <p><strong>Technologies Used:</strong> Power Automate, SharePoint, Excel, Workflow Automation</p>
+  
+    <p><strong>Outcome:</strong> The workflow reduced manual reporting effort, improved process efficiency, and supported more reliable data sharing for internal stakeholders.</p>
+  
+    <p><em>This portfolio example is presented using sample data and a generalized description to respect client confidentiality.</em></p>
+  
+    <br><span class="btn" onclick="goBackToProjects()">Back to Projects</span>
+  </section>
   
   <section id="contact">
     <h2>Contact</h2>
