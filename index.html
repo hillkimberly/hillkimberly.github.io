@@ -41,6 +41,7 @@
 
     header h1 {
       font-size: 42px;
+      margin-bottom: 12px;
     }
 
     .founder {
@@ -115,6 +116,17 @@
 
     .btn:hover {
       background: #005fa3;
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #0077cc;
+      color: #0077cc;
+    }
+    
+    .btn-outline:hover {
+      background: #0077cc;
+      color: #fff;
     }
 
     .section-subtext {
@@ -211,10 +223,6 @@
       margin-bottom: 10px;
     }
 
-    footer img {
-      margin-bottom: 10px;
-    }
-
     footer a img {
       cursor: pointer;
     }
@@ -224,9 +232,17 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
+    
     .project-details {
       display: none;
+      max-width: 900px;
+      margin: auto;
     }
+
+    .project-details h2 {
+      margin-bottom: 20px;
+    }
+    
   </style>
 <script>
   function goBackToProjects() {
@@ -586,7 +602,7 @@
 
   <footer>
     <a href="https://needgreatersuccess.com" target="_blank">
-      <img src="NGS_Logo_Transparent.png" alt="Need Greater Success Logo" width="90">
+      <img src="NGS_Logo_Transparent.png" alt="Need Greater Success Logo" class="footer-logo">
     </a>
     
     <p><strong>Need Greater Success (NGS)</strong></p>
